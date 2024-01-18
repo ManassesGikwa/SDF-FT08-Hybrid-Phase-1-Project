@@ -24,12 +24,16 @@ body {
 
 }   
 .navbar a{
-margin-right: 50px;
-color:  #D8C9C9;
-text-decoration: none;
-}
+    margin-right: 50px;
+    color:  #D8C9C9;
+    text-decoration: none;
+    }
+.temperature-color {
+    transition: color 0.3s ease; /* Optional: Add a smooth transition effect */
+  }
+  
 #heading{
-   
+   font-size: 50px;
     text-align: center;
     color: #D8C9C9;
     padding-top: 50px;
@@ -46,39 +50,50 @@ text-decoration: none;
 form {
     margin-bottom: 20px;
 }
-
-#left-pane {
-    margin-left: 20px;
-    width: 800px;
-    background-color:  #D8C9C9;
-
-   
-
-}
 #countryInfo{
     text-align: center;
     line-height: 2rem;
     padding-top: 40px;
-
 }
+
+#countryInfo p:hover {
+    background-color: #bf8fdf; 
+    cursor: pointer;
+  }
+
 #countryInfo span{
     font-weight: bold;
 }
+
 .flagcontainer{
    display: block;
     text-align: center;
-   
 }
 #weatherInfo {
     text-align: center;
     line-height: 2rem;
     padding-top: 20px;
 }
+
+#weatherInfo p:hover {
+    background-color:  #cfade5; 
+    cursor: pointer;
+  }
+  #weatherInfo ul:hover {
+    background-color: #cfade5; 
+    cursor: pointer;
+  }
+  #weatherInfo ul li:hover {
+    background-color:  #bf8fdf; 
+    cursor: pointer;
+  }
 #cityInput{
 padding: 20px;
 width: 500px;
 border-radius: 20px;
 font-size: 20px;
+border-width: thick;
+
 }
 #cityInput::placeholder{
    color:black;
@@ -88,14 +103,31 @@ font-size: 20px;
     list-style-type: none;
 
 }
-
-#cityImage img {
-    max-width: 100%;    
+#left-pane {
+    margin-left: 20px;
+    width: 800px;
+    background-color:  #D8C9C9;
+    border-radius: 15px;
+    border-style:groove;
+    border-width: thick;
+    
+}
+#left-pane:hover {
+    background-color:  #d3b4e7; 
+    cursor: pointer;
+}
+   
+#cityImage img{
+    max-width: 95%;    
     height: 100%; 
     border-radius: 15px;
-    margin-left: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
     object-fit: fill;
+    border-style:groove;
+    border-width: thick;
 }
+
 #cityForm{  
 margin-left: 770px;
 padding-top: 150px;
@@ -113,9 +145,18 @@ width: 100%;
 }
 #left-pane #countryInfo h1{
 text-align: center;
+
 }
+
 #flag{
     height: 200px;
     width: 250px;
     padding:10px 0px 0px 10px;
+}
+#searchIcon{
+  
+    padding-left: 10px;
+    font-size:xx-large;
+    padding-top:2rem;  
+
 }
