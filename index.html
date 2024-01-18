@@ -4,23 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
     <title>City Facts Game</title>
 </head>
 <body>
+    <h1 id="heading">CITY FACTS GAME</h1>
+    <nav class="navbar">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#login">LOGIN</a>
+        <a href="#signup">SIGNUP</a>
+      </nav>
+      <form id="cityForm">
+           
+        <input type="text" id="cityInput" required>
+        <button type="submit">Get Weather</button>
+    </form>
     <div class="container">
-        <form id="cityForm">
-            <label for="cityInput">Enter City:</label>
-            <input type="text" id="cityInput" required>
-            <button type="submit">Get Weather</button>
-        </form>
+        
         <div id="weatherInfo">
-          <h2>Here is the weather for </h2>
+        
             <!-- Weather information will be displayed here -->
         </div>
         <div id="cityImage">
             <!-- City image will be displayed here -->
         </div>
     </div>
+    <div class="icons">
+        <a href="https://github.com/ManassesGikwa/" target="_blank">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/manasses-gikwa-a1013196/" target="_blank">
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+        </a>
+        <a href="https://twitter.com/ManassesGikwa" target="_blank">
+          <i class="fa fa-twitter-square" aria-hidden="true"></i>
+        </a>
+        <a href="https://myaccount.google.com/" target="_blank">
+          <i class="fa fa-google" aria-hidden="true"></i>
+        </a>
+      </div>
     <script src="index.js"></script>
 </body>
 </html>
