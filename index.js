@@ -82,6 +82,40 @@ navbarIcons.forEach(icon => {
 });
 
 
+//event listeners for footer icons
+const footerIcons = document.querySelectorAll('.icons a');
+
+footerIcons.forEach(icon => {
+  icon.addEventListener('mouseover', function () {
+    if (weatherData && weatherData.temperature) {
+      icon.classList.add('temperature-color');
+      icon.style.color = getTemperatureColor(weatherData.temperature);
+    }
+  });
+
+  icon.addEventListener('mouseout', function () {
+    icon.classList.remove('temperature-color');
+    icon.style.color = ''; 
+  });
+});
+
+//event listeners for other footer items
+
+const footerItems2 = document.querySelectorAll('.icons p');
+
+footerItems2.forEach(icon => {
+  icon.addEventListener('mouseover', function () {
+    if (weatherData && weatherData.temperature) {
+      icon.classList.add('temperature-color');
+      icon.style.color = getTemperatureColor(weatherData.temperature);
+    }
+  });
+
+  icon.addEventListener('mouseout', function () {
+    icon.classList.remove('temperature-color');
+    icon.style.color = ''; 
+  });
+});
 
 // Function to capitalize the first letter of a string
 function capitalizeFirstLetter(string) {
