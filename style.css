@@ -116,7 +116,10 @@ border-width: thick;
     background-color:  #d3b4e7; 
     cursor: pointer;
 }
-   
+  
+#cityImage{
+    margin-bottom: 20px;
+}
 #cityImage img{
     max-width: 95%;    
     height: 100%; 
