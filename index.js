@@ -248,6 +248,6 @@ function displayCountryInfo(countryData) {
             <p><span>Current Timezone</span>: ${timezone}</p>
         `;
     } else {
-        countryInfo.innerHTML = '<p>Country information is currently not available.</p>';
+        countryInfo.innerHTML = `<p> ${city}'s information is currently not available or is not a capital city".</p>`;
     }
 }
