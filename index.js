@@ -126,18 +126,81 @@ function fetchData(city) {
       displayCityImage(imageUrl);
 
       // Fetch country information
-      return fetch(`https://restcountries.com/v3.1/capital/${city}`);
-    })
+      return fetch(`https://restcountries.com/v3.1/capital/${city}`)
+    
     .then(response => response.json())
     .then(countryData => {
       // Display country information
       displayCountryInfo(countryData);
+
+       // Send data to JSON server
+       sendToJSONServer(city, weatherData, imageUrl, countryData);
+      });
+    })
+    .then(() => {
+      // Display weather information
+      displayWeather(city, weatherData);
+
+      // Display city image
+      displayCityImage(imageUrl);
     })
     .catch(error => {
       console.error('Error fetching data:', error);
       // If there's an error, still try to display the city name
       displayWeather(String(city), null);
     });
+    
+}
+ // Function to send data to JSON server
+function sendToJSONServer(city, weatherData, imageUrl, countryData) {
+  const newData = {
+    city: city,
+    weather: weatherData,
+    imageUrl: imageUrl,
+    country: countryData,
+  };
+
+
+  // Sending a POST request to my JSON server
+  fetch('http://localhost:3000/data', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newData),
+  })
+    .then(response => response.json())
+    .then(responseData => {
+      console.log('Data sent to JSON server:', responseData);
+    })
+    .catch(error => console.error('Error sending data to JSON server:', error));
+}
+
+
+// Function to update an existing city object in the database
+function updateCityData(updatedCityData, weatherData, existingCityData) {
+  existingCityData.weather = weatherData;
+  existingCityData.city = updatedCityData;
+
+  // Example using fetch for sending a PUT request
+  fetch(`http://your-api-url/cities/${city}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(existingCityData),
+  })
+    .then(response => response.json())
+    .then(responseData => {
+      console.log('City updated:', responseData);
+    })
+    .catch(error => console.error('Error updating city:', error));
+
+  // to confirm the updated city data
+  console.log('Updated city data:', existingCityData);
+
+  // apromise or handle asynchronous operations
+  return Promise.resolve();
 }
 
 // Function to display weather information

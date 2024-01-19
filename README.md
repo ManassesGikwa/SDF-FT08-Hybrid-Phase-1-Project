@@ -1,6 +1,11 @@
 ### CITY FACTS GAME
+
 ### Description
-This is an interactive web application that basically allows the user to input a city and gets the following information from it:
+This is an interactive web application that basically allows the user to input a city some facts from it.
+
+### KEY DETAIL PROJECT FEATURES 
+The following highlights the nature of the data we recieve upon sending a request.
+
 1. Some facts about the city. ie country the city it is found, area, population size, the side of the road people drive on etc. This is derived from RESTCountries API(https://restcountries.com/v3.1/capital/${city}) which unfortunately only gives 
 data for capital cities.
 
