@@ -1,10 +1,11 @@
-*{
-    margin:0;
-    padding:0;
+/* Resetting default margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-
+/* Body styling with background image */
 body {
     font-family: Arial, sans-serif;
     background-image: url("https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
@@ -12,64 +13,76 @@ body {
     background-size: cover;
     width: 100%;
 }
-.navbar{
+
+/* Navbar styling */
+.navbar {
     text-align: end;
-    margin-left:200px;
+    margin-left: 200px;
     margin-right: 100px;
     padding-left: 950px;
     padding-top: 50px;
     font-size: 24px;
     font-weight: bolder;
-  
+}
 
-}   
-.navbar a{
+/* Navbar link styling */
+.navbar a {
     margin-right: 80px;
-    color:  #D8C9C9;
+    color: #D8C9C9;
     text-decoration: none;
+}
 
-    }
+/* Temperature color transition */
 .temperature-color {
-    transition: color 0.3s ease; /* Optional: Add a smooth transition effect */
-  }
-  
-#heading{
-   font-size: 100px;
+    transition: color 0.3s ease;
+}
+
+/* Heading styling */
+#heading {
+    font-size: 100px;
     text-align: center;
     color: #D8C9C9;
     padding-top: 50px;
-    font-family: 'Jacques Francois Shadow';font-size: 24px;
+    font-family: 'Jacques Francois Shadow';
+    font-size: 24px;
     font-weight: bolder;
-
 }
+
+/* Container styling */
 .container {
     max-width: 100%;
     padding-top: 100px;
     display: flex;
 }
 
+/* Form styling */
 form {
     margin-bottom: 20px;
 }
-#countryInfo{
+
+/* Country information styling */
+#countryInfo {
     text-align: center;
     line-height: 2rem;
     padding-top: 40px;
 }
 
 #countryInfo p:hover {
-    background-color: #bf8fdf; 
+    background-color: #bf8fdf;
     cursor: pointer;
-  }
+}
 
-#countryInfo span{
+#countryInfo span {
     font-weight: bold;
 }
 
-.flagcontainer{
-   display: block;
+/* Flag container styling */
+.flagcontainer {
+    display: block;
     text-align: center;
 }
+
+/* Weather information styling */
 #weatherInfo {
     text-align: center;
     line-height: 2rem;
@@ -77,131 +90,149 @@ form {
 }
 
 #weatherInfo p:hover {
-    background-color:  #cfade5; 
+    background-color: #cfade5;
     cursor: pointer;
-  }
-  #weatherInfo ul:hover {
-    background-color: #cfade5; 
-    cursor: pointer;
-  }
-  #weatherInfo ul li:hover {
-    background-color:  #bf8fdf; 
-    cursor: pointer;
-  }
-#cityInput{
-padding: 20px;
-width: 500px;
-border-radius: 20px;
-font-size: 20px;
-border-width: thick;
+}
 
+#weatherInfo ul:hover {
+    background-color: #cfade5;
+    cursor: pointer;
 }
-#cityInput::placeholder{
-   color:black;
-   text-align: center;
+
+#weatherInfo ul li:hover {
+    background-color: #bf8fdf;
+    cursor: pointer;
 }
-#weatherInfo ul{
+
+/* City input styling */
+#cityInput {
+    padding: 20px;
+    width: 500px;
+    border-radius: 20px;
+    font-size: 20px;
+    border-width: thick;
+}
+
+#cityInput::placeholder {
+    color: black;
+    text-align: center;
+}
+
+/* Weather info list styling */
+#weatherInfo ul {
     list-style-type: none;
-
 }
+
+/* Left pane styling */
 #left-pane {
     margin-left: 20px;
     width: 800px;
-    background-color:  #D8C9C9;
+    background-color: #D8C9C9;
     border-radius: 15px;
-    border-style:groove;
+    border-style: groove;
     border-width: thick;
     margin-bottom: 20px;
 }
+
 #left-pane:hover {
-    background-color:  #d3b4e7; 
+    background-color: #d3b4e7;
     cursor: pointer;
 }
-  
-#cityImage{
+
+/* City image styling */
+#cityImage {
     margin-bottom: 20px;
 }
-#cityImage img{
-    max-width: 95%;    
-    height: 100%; 
+
+#cityImage img {
+    max-width: 95%;
+    height: 100%;
     border-radius: 15px;
     margin-left: 50px;
     margin-right: 50px;
     object-fit: fill;
-    border-style:groove;
+    border-style: groove;
     border-width: thick;
     margin-bottom: 20px;
 }
 
-#cityForm{  
-margin-left: 770px;
-padding-top: 150px; 
+/* City form styling */
+#cityForm {
+    margin-left: 770px;
+    padding-top: 150px;
 }
-.icons{
-padding-top: 20px;
-padding-left: 250px;
-background-color: black;
-size: 300px;
-height: 90px;
-width: 100%;
-display: flex;
+
+/* Footer icon styling */
+.icons {
+    padding-top: 20px;
+    padding-left: 250px;
+    background-color: black;
+    size: 300px;
+    height: 90px;
+    width: 100%;
+    display: flex;
 }
-.icons a{
-    color:#D8C9C9;
+
+.icons a {
+    color: #D8C9C9;
     padding-right: 10px;
 }
-#left-pane #countryInfo h1{
-text-align: center;
 
+/* Country info heading styling */
+#left-pane #countryInfo h1 {
+    text-align: center;
 }
 
-#flag{
+/* Flag styling */
+#flag {
     height: 200px;
     width: 250px;
-    padding:10px 0px 0px 10px;
+    padding: 10px 0px 0px 10px;
 }
-#searchIcon{
+
+/* Search icon styling */
+#searchIcon {
     cursor: pointer;
     padding-left: 10px;
-    font-size:xx-large;
-    padding-top:2rem;  
+    font-size: xx-large;
+    padding-top: 2rem;
+}
 
-}
-#feedback{
+/* Feedback, copyright, and follow us styling */
+#feedback {
     color: white;
     font-weight: bolder;
-    font-size:x-large;
+    font-size: x-large;
     padding-left: 400px;
-   
 }
-#copyright{
+
+#copyright {
     color: white;
     font-weight: bolder;
-    font-size:x-large;
+    font-size: x-large;
     text-align: end;
     padding-left: 300px;
-    
 }
-#followUs{
+
+#followUs {
     color: white;
     font-weight: bolder;
-    font-size:x-large;
-   padding-right: 30px;
-   
+    font-size: x-large;
+    padding-right: 30px;
 }
-.icons{
- align-items: start;  
-}
-#twitter{
-    color:D8C9C9;
+
+/* Social media icon styling */
+#twitter {
+    color: D8C9C9;
     font-size: 40px;
 }
-#facebook{
-    color:D8C9C9;
+
+#facebook {
+    color: D8C9C9;
     font-size: 40px;
-   
 }
-#instagram{
-    color:D8C9C9;
+
+#instagram {
+    color: D8C9C9;
     font-size: 40px;
 }
