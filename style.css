@@ -110,7 +110,7 @@ border-width: thick;
     border-radius: 15px;
     border-style:groove;
     border-width: thick;
-    
+    margin-bottom: 20px;
 }
 #left-pane:hover {
     background-color:  #d3b4e7; 
@@ -126,6 +126,7 @@ border-width: thick;
     object-fit: fill;
     border-style:groove;
     border-width: thick;
+    margin-bottom: 20px;
 }
 
 #cityForm{  

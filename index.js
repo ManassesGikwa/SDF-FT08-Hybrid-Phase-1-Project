@@ -38,7 +38,7 @@ leftPane.addEventListener('mouseover', function () {
 });
 
 leftPane.addEventListener('mouseout', function () {
-  leftPane.style.borderColor = ''; // Reset to default color
+  leftPane.style.borderColor = ''; // Resets to default color
 });
 
 cityImage.addEventListener('mouseover', function () {
@@ -47,12 +47,12 @@ cityImage.addEventListener('mouseover', function () {
     cityImage.querySelector('img').style.borderColor = getTemperatureColor(weatherData.temperature);
   }
 });
-
+// event listener for the image border
 cityImage.addEventListener('mouseout', function () {
-  cityImage.querySelector('img').style.borderColor = ''; // Reset to default color
+  cityImage.querySelector('img').style.borderColor = ''; 
 });
 
-// Add event listener for heading
+// event listener for heading
 const heading = document.getElementById('heading');
 heading.addEventListener('mouseover', function () {
   if (weatherData && weatherData.temperature) {
@@ -64,7 +64,7 @@ heading.addEventListener('mouseout', function () {
   heading.style.color = ''; // Reset to default color
 });
 
-// Add event listeners for navbar icons
+//event listeners for navbar icons
 const navbarIcons = document.querySelectorAll('.navbar a');
 
 navbarIcons.forEach(icon => {
@@ -214,3 +214,8 @@ function displayCountryInfo(countryData) {
     countryInfo.innerHTML = '<p>Country information is currently not available.</p>';
   }
 }
+ 
+
+
+
+
