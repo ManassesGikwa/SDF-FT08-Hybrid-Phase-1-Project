@@ -1,60 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set and responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link to external CSS file and Font Awesome library -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    
+    <!-- Page title -->
     <title>City Facts Game</title>
 </head>
 <body>
+    <!-- Heading for the page -->
     <h1 id="heading">CITY FACTS GAME</h1>
+
+    <!-- Navigation bar -->
     <nav class="navbar">
         <a href="#home">HOME</a>
         <a href="#about">ABOUT</a>
         <a href="#login">LOGIN</a>
         <a href="#signup">SIGNUP</a>
-      </nav>
-      <form id="cityForm">
-           
-        <input type="text" id="cityInput" placeholder="input a city to search" required >
-        
+    </nav>
+
+    <!-- Form for city input and search icon -->
+    <form id="cityForm">
+        <input type="text" id="cityInput" placeholder="input a city to search" required>
         <i id="searchIcon" class="fa fa-search" aria-hidden="true"></i>
     </form>
-    <div class="container">
-        <div id="left-pane"> 
-          <div id="countryInfo">
-        
-            <!-- Weather information will be displayed here -->
-          </div>
-          <div id="weatherInfo">
-        
-            <!-- Weather information will be displayed here -->
-        </div>
-        </div>
-        
 
+    <!-- Container for main content -->
+    <div class="container">
+        <!-- Left pane containing country information and weather information -->
+        <div id="left-pane">
+            <div id="countryInfo">
+                <!-- Country information will be displayed here -->
+            </div>
+            <div id="weatherInfo">
+                <!-- Weather information will be displayed here -->
+            </div>
+        </div>
+
+        <!-- Container for city image -->
         <div id="cityImage">
             <!-- City image will be displayed here -->
         </div>
-        
     </div>
+
+    <!-- Icons section for social media links, feedback, and copyright -->
     <div class="icons">
-      <p id="followUs">Follow us! We are on</p>
-        </a>
+        <p id="followUs">Follow us! We are on</p>
         <a id="facebook" href="https://web.facebook.com/Mavache" target="_blank">
-          <iconify-icon icon="ic:outline-facebook"></iconify-icon>
+            <!-- Facebook icon -->
+            <iconify-icon icon="ic:outline-facebook"></iconify-icon>
         </a>
         <a id="twitter" href="https://twitter.com/ManassesGikwa" target="_blank">
-          <iconify-icon id="twitter" icon="icon-park-outline:big-x"></iconify-icon>
+            <!-- Twitter icon -->
+            <iconify-icon id="twitter" icon="icon-park-outline:big-x"></iconify-icon>
         </a>
         <a id="instagram" href="https://www.instagram.com/sircaptainmanasses/" target="_blank">
-          <iconify-icon icon="cib:instagram"></iconify-icon>
+            <!-- Instagram icon -->
+            <iconify-icon icon="cib:instagram"></iconify-icon>
         </a>
         <p id="feedback">Provide Feedback</p>
-         <p id="copyright">Copyright 2023</p>
-      </div>
-     
+        <p id="copyright">Copyright 2023</p>
+    </div>
+    
+    <!-- JavaScript files -->
     <script src="index.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>
