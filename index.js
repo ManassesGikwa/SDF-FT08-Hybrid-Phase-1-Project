@@ -183,29 +183,6 @@ function fetchData(city) {
     });
     
 }
-
-
-//Example using fetch for sending a PUT request
-//   fetch(`http://your-api-url/cities/${city}`, {
-//     method: 'PUT',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(existingCityData),
-//   })
-//     .then(response => response.json())
-//     .then(responseData => {
-//       console.log('City updated:', responseData);
-//     })
-//     .catch(error => console.error('Error updating city:', error));
-
-//   // to confirm the updated city data
-//   console.log('Updated city data:', existingCityData);
-
-//   // apromise or handle asynchronous operations
-//   return Promise.resolve();
-// }
-
 // Function to display weather information
 function displayWeather(city, weatherData) {
   //identifying various elements int the html
