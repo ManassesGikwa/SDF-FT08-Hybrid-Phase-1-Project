@@ -107,6 +107,7 @@ function getTemperatureColor(temperature) {
 
 // Function to fetch weather data and city image
 function fetchData(city) {
+  let imageUrl; // Declare imageUrl variable
   // Fetch weather data
   fetch(`https://goweather.herokuapp.com/weather/${city}`)
     .then(response => response.json())
@@ -125,6 +126,7 @@ function fetchData(city) {
       // Display city image
       displayCityImage(imageUrl);
 
+       
       // Fetch country information
       return fetch(`https://restcountries.com/v3.1/capital/${city}`)
     
@@ -133,8 +135,10 @@ function fetchData(city) {
       // Display country information
       displayCountryInfo(countryData);
 
-       // Send data to JSON server
-       sendToJSONServer(city, weatherData, imageUrl, countryData);
+      
+      // Calling sendToJSONServer with all required data
+      sendToJSONServer(city, weatherData, imageUrl, countryData);
+      
       });
     })
     .then(() => {
@@ -152,56 +156,56 @@ function fetchData(city) {
     
 }
  // Function to send data to JSON server
-function sendToJSONServer(city, weatherData, imageUrl, countryData) {
-  const newData = {
-    city: city,
-    weather: weatherData,
-    imageUrl: imageUrl,
-    country: countryData,
-  };
+// function sendToJSONServer(city, weatherData, imageUrl, countryData) {
+//   const newData = {
+//     city: city,
+//     weather: weatherData,
+//     imageUrl: imageUrl,
+//     country: countryData,
+//   };
 
 
-  // Sending a POST request to my JSON server
-  fetch('http://localhost:3000/data', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(newData),
-  })
-    .then(response => response.json())
-    .then(responseData => {
-      console.log('Data sent to JSON server:', responseData);
-    })
-    .catch(error => console.error('Error sending data to JSON server:', error));
-}
+//   // Sending a POST request to my JSON server
+//   fetch('http://localhost:3000/data', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(newData),
+//   })
+//     .then(response => response.json())
+//     .then(responseData => {
+//       console.log('Data sent to JSON server:', responseData);
+//     })
+//     .catch(error => console.error('Error sending data to JSON server:', error));
+// }
 
 
-// Function to update an existing city object in the database
-function updateCityData(updatedCityData, weatherData, existingCityData) {
-  existingCityData.weather = weatherData;
-  existingCityData.city = updatedCityData;
+// // Function to update an existing city object in the database
+// function updateCityData(updatedCityData, weatherData, existingCityData) {
+//   existingCityData.weather = weatherData;
+//   existingCityData.city = updatedCityData;
 
-  // Example using fetch for sending a PUT request
-  fetch(`http://your-api-url/cities/${city}`, {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(existingCityData),
-  })
-    .then(response => response.json())
-    .then(responseData => {
-      console.log('City updated:', responseData);
-    })
-    .catch(error => console.error('Error updating city:', error));
+//   // Example using fetch for sending a PUT request
+//   fetch(`http://your-api-url/cities/${city}`, {
+//     method: 'PUT',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(existingCityData),
+//   })
+//     .then(response => response.json())
+//     .then(responseData => {
+//       console.log('City updated:', responseData);
+//     })
+//     .catch(error => console.error('Error updating city:', error));
 
-  // to confirm the updated city data
-  console.log('Updated city data:', existingCityData);
+//   // to confirm the updated city data
+//   console.log('Updated city data:', existingCityData);
 
-  // apromise or handle asynchronous operations
-  return Promise.resolve();
-}
+//   // apromise or handle asynchronous operations
+//   return Promise.resolve();
+// }
 
 // Function to display weather information
 function displayWeather(city, weatherData) {
@@ -277,7 +281,7 @@ function displayCountryInfo(countryData) {
     countryInfo.innerHTML = '<p>Country information is currently not available.</p>';
   }
 }
- 
+
 
 
 
