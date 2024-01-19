@@ -13,27 +13,28 @@ body {
     width: 100%;
 }
 .navbar{
-    margin-left:300px ;
-    padding-left: 800px;
+    text-align: end;
+    margin-left:200px;
+    margin-right: 100px;
+    padding-left: 950px;
     padding-top: 50px;
-   
-    font-family: inter;
     font-size: 24px;
     font-weight: bolder;
   
 
 }   
 .navbar a{
-    margin-right: 50px;
+    margin-right: 80px;
     color:  #D8C9C9;
     text-decoration: none;
+
     }
 .temperature-color {
     transition: color 0.3s ease; /* Optional: Add a smooth transition effect */
   }
   
 #heading{
-   font-size: 50px;
+   font-size: 100px;
     text-align: center;
     color: #D8C9C9;
     padding-top: 50px;
