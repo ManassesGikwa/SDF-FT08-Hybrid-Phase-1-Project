@@ -195,7 +195,7 @@ function displayCountryInfo(countryData) {
   if (countryData.length > 0) {
     const country = countryData[0];
     const timezone = country.timezones && country.timezones.length > 0 ? country.timezones[0] : 'Unknown';
-
+      //appending various country info elements to the html
     countryInfo.innerHTML = `
       <h2>City Information</h2>
       <p><span>Country</span>: ${country.name.common}</p>

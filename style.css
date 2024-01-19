@@ -154,7 +154,7 @@ text-align: center;
     padding:10px 0px 0px 10px;
 }
 #searchIcon{
-  
+    cursor: pointer;
     padding-left: 10px;
     font-size:xx-large;
     padding-top:2rem;  
