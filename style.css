@@ -134,6 +134,7 @@ form {
     margin-bottom: 20px;
 }
 
+/*Left part of the screen styling*/
 #left-pane:hover {
     background-color: #d3b4e7;
     cursor: pointer;
