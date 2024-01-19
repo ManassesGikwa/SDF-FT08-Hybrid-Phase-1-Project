@@ -144,6 +144,7 @@ display: flex;
 }
 .icons a{
     color:#D8C9C9;
+    padding-right: 10px;
 }
 #left-pane #countryInfo h1{
 text-align: center;
@@ -181,10 +182,22 @@ text-align: center;
     color: white;
     font-weight: bolder;
     font-size:x-large;
-   padding-right: 300px;
+   padding-right: 30px;
    
+}
+.icons{
+ align-items: start;  
 }
 #twitter{
     color:D8C9C9;
-    font-size: larger;
+    font-size: 40px;
+}
+#facebook{
+    color:D8C9C9;
+    font-size: 40px;
+   
+}
+#instagram{
+    color:D8C9C9;
+    font-size: 40px;
 }
