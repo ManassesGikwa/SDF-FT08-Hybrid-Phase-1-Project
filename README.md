@@ -1,7 +1,7 @@
 ### CITY FACTS GAME
 
 ### Description
-This is an interactive web application that basically allows the user to input a city some facts from it.
+This is an interactive web application that basically allows the user to input a city and retrieve some facts about it.
 
 ### KEY DETAIL PROJECT FEATURES 
 The following highlights the nature of the data we recieve upon sending a request.
